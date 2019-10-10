@@ -1,0 +1,7 @@
+{
+    "records": [],
+    "resources": [{
+        "location": "Service Descriptors/uc9_sf_workday.Process-Resource.json",
+        "type": "generated"
+    }]
+}

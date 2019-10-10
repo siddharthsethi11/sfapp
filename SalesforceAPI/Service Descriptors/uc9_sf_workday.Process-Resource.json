@@ -1,0 +1,104 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:8084",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/contacts" : {
+      "post" : {
+        "summary" : "",
+        "description" : "",
+        "operationId" : "post-contacts",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/Element"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "get" : {
+        "summary" : "",
+        "description" : "",
+        "operationId" : "get-contacts",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "a contact-details to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/contact-details"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Element" : {
+      "type" : "object",
+      "required" : [ "fname", "lname", "email" ],
+      "properties" : {
+        "fname" : {
+          "type" : "string"
+        },
+        "lname" : {
+          "type" : "string"
+        },
+        "email" : {
+          "type" : "string"
+        },
+        "phone" : {
+          "type" : "integer"
+        }
+      }
+    },
+    "contact" : {
+      "type" : "object",
+      "properties" : {
+        "fname" : {
+          "type" : "string"
+        },
+        "lname" : {
+          "type" : "string"
+        },
+        "email" : {
+          "type" : "string"
+        },
+        "phone" : {
+          "type" : "string"
+        }
+      }
+    },
+    "contact-details" : {
+      "type" : "object",
+      "properties" : {
+        "contact" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/contact",
+            "uniqueItems" : false
+          }
+        }
+      }
+    }
+  }
+}

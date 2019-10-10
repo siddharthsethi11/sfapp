@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_feeVEHboEemKJon0z-l5yA" targetNamespace="http://tns.tibco.com/bw/composite/SalesforceAPI" name="SalesforceAPI" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_vT-t0HbrEemKJon0z-l5yA" name="contacts" promote="ComponentProcess/contacts">
+    <sca:interface.wsdl xmi:id="_vUGpoHbrEemKJon0z-l5yA" interface="http://xmlns.example.com/20190515133734#wsdl.interface(contacts)" scaext:wsdlLocation="../Processes/uc9_sf_workday/Process.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_vUPzkHbrEemKJon0z-l5yA" name="RestService" path="/contacts" docBasePath="http://localhost:7777/SalesforceAPI" docResourcePath="Resource" basePath="/" connector="uc9_sf_workday.Resource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/uc9_sf_workday.Process-Resource.json">
+      <operation xmi:id="_vUWhQHbrEemKJon0z-l5yA" operationName="post" nickname="post-contacts" httpMethod="POST" responseStyle="element" requestStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_dCGVEHbvEemKJon0z-l5yA" operationName="get" nickname="get-contacts" httpMethod="GET" responseStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_vVJLcHbrEemKJon0z-l5yA"/>
+      <advancedConfig xmi:id="_vUTd8HbrEemKJon0z-l5yA" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_vUXIUHbrEemKJon0z-l5yA" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_gIBBUHboEemKJon0z-l5yA" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gIQR4HboEemKJon0z-l5yA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gIVxcHboEemKJon0z-l5yA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gIap8HboEemKJon0z-l5yA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gIficHboEemKJon0z-l5yA" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gIjz4HboEemKJon0z-l5yA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gIneQHboEemKJon0z-l5yA" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gIqhkHboEemKJon0z-l5yA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gIuL8HboEemKJon0z-l5yA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_B4vJ0HbpEemKJon0z-l5yA" name="salesforce.wsdl" type="XMLSchema:string" scaext:simpleValue="" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_nAKIYHbpEemKJon0z-l5yA" name="salesforce.xsd" type="XMLSchema:string" scaext:simpleValue="" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_nBXCQHbpEemKJon0z-l5yA" name="metadata.xsd" type="XMLSchema:string" scaext:simpleValue="" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_-zN4wODzEemf2c3hhkDVnQ" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_DnnnYOQfEemf2c3hhkDVnQ" name="salesforce" type="XMLSchema:string" scaext:simpleValue="" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_51G_sHbqEemKJon0z-l5yA" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_51G_sXbqEemKJon0z-l5yA" processName="uc9_sf_workday.Process"/>
+    <sca:service xmi:id="_vT6cYHbrEemKJon0z-l5yA" name="contacts">
+      <sca:interface.wsdl xmi:id="_vT7qgHbrEemKJon0z-l5yA" interface="http://xmlns.example.com/20190515133734#wsdl.interface(contacts)" scaext:wsdlLocation="../Processes/uc9_sf_workday/Process.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

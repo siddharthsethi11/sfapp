@@ -1,0 +1,5 @@
+{"records": [{
+    "jsonSchemaLocation": "/SalesforceAPI/Service Descriptors/uc9_sf_workday.Process-Resource.json",
+    "conversionType": "linked",
+    "xsdSchemaTargetNamespace": "http://www.example.com/namespaces/tns/1557908972064"
+}]}
